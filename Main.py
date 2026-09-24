@@ -1,19 +1,42 @@
+def show_result(result):
+    print(result)
+    if result == 41:
+        print("You reached 41! Special result detected.")
+
+
 def add(x,y):
-    print(x+y)
+    show_result(x+y)
+
 
 def subtract(x,y):
-    print(x-y)
+    show_result(x-y)
+
 
 def multiply(x,y):
-    print(x*y)
+    show_result(x*y)
+
 
 def division(x,y):
-    print(x/y)
+    show_result(x/y)
 
-x = int(input('enter first number: '))
-y = int(input('enter second number: '))
+#################################################
+while(True):
+    print ('Howdy. What would you like to do')
+    print ('Type (a)dd (s)ubtract (m)ultipyly (d)ivide (q)uit')
+    choice = input(": ")
+    if choice == 'q':
+            break
+    #print (choice)
+    x = int(input('enter first number: '))
+    y = int(input('enter second number: '))
 
-add(x,y)
-subtract(x,y)
-multiply(x,y)
-division(x,y)
+    if choice == 'a':
+        add(x,y)
+    elif choice =='s':
+        subtract(x,y)
+    elif choice == 'm':
+        multiply(x,y)
+    elif choice == 'd':
+        division(x,y)
+    else:
+        print("I don't understand that")
